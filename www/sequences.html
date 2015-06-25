@@ -56,6 +56,7 @@
                 </div>
             </div>
             <div class="disc" id="discription">
+                <img src="img/logo.svg">
                 <div class="name">
                     Sequence Name
                 </div>
@@ -181,15 +182,20 @@
         <script type="text/javascript">
              for(var i=0; i < document.getElementsByClassName('letter').length; i++) {
                 document.getElementsByClassName('letter')[i].innerHTML = document.getElementsByClassName('letter')[i].parentNode.getElementsByClassName('name')[0].innerHTML.charAt(25)
-                document.getElementsByClassName('letter')[i].style.backgroundColor = '#' + Math.floor(Math.random() * 256).toString(16) + Math.floor(Math.random() * 256).toString(16) + Math.floor(Math.random() * 256).toString(16)
+                if (i%3 == 0)
+                    document.getElementsByClassName('letter')[i].style.backgroundColor = '#47cad6'
+                else if (i%3 == 1)
+                    document.getElementsByClassName('letter')[i].style.backgroundColor = '#ffc752'
+                else
+                    document.getElementsByClassName('letter')[i].style.backgroundColor = '#ff5b52'
             }
 
             window.onscroll = function (e) {  
-                if(window.scrollY >= 54) {
+                if(window.scrollY >= 58) {
                     discription.className += " disc-fixed";
-                    sequences.style.marginTop = '50px'
+                    sequences.style.marginTop = '59px'
                 }
-                if (window.scrollY <= 54) {
+                if (window.scrollY <= 58) {
                     discription.className = "disc"
                     sequences.style.marginTop = ''
                 }
