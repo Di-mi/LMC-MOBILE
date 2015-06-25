@@ -24,18 +24,6 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
     font-family: 'exo', Arial, sans-serif;
     font-size:14px;
     height:100%;
@@ -53,18 +41,25 @@ body {
 .sequ-table .header {
     font-weight: bold;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 18px 0;
     background-color: #FFBA29;
     width: 100%;
 }
+
+.sequ-table .header div {padding-left: 16px;}
 
 .sequ-table .disc {
     background-color: #47cad6;
     color: #ffffff;
     border-bottom: 5px solid rgb(3, 149, 163);
     width: 100%;
+}
+
+.sequ-table .disc-fixed {
+    position: fixed;
+    top: 0;
 }
 
 .sequ-table div {display: inline-block;}

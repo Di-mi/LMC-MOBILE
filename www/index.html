@@ -28,7 +28,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-        <title>Sequances</title>
+        <title>Sequences</title>
         <script type='application/javascript' src='js/fastclick.js'></script>  
 
     </head>
@@ -39,18 +39,33 @@
             FastClick.attach(document.body);
         }, false);
     }
-     function changePage()
+    
+    function changePage()
      {   
         window.location = "seq1.html";
     }
+
+    window.onscroll = function (e) {  
+        if(window.scrollY >= 60) {
+            discription.className += " disc-fixed";
+            sequences.style.marginTop = '61px'
+        }
+        if (window.scrollY <= 59) {
+            discription.className = "disc"
+            sequences.style.marginTop = ''
+        }
+    }  
+
     </script>
     <body>
         
         <div class="sequ-table">
             <div class="header">
-                Saved Sequences
+                <div>
+                    Saved Sequences
+                </div>
             </div>
-            <div class="disc">
+            <div class="disc" id="discription">
                 <div class="name">
                     Sequence Name
                 </div>
@@ -59,16 +74,16 @@
                 </div>
             </div>
 
-            <div class="sequences">
-                <a onclick="changePage();"><div class="sequ">
+            <div class="sequences" id="sequences">
+                <div class="sequ" onclick="changePage();">
                     <div class="name">
                         Leptirica moja
                    </div>
                     <div class="no-frames">
                         10
                     </div>
-                </div></a>
-                <div class="sequ">
+                </div>
+                <div class="sequ" onclick="changePage();">
                     <div class="name">
                         Test
                    </div>
@@ -76,7 +91,7 @@
                         14
                     </div>
                 </div>
-                <div class="sequ">
+                <div class="sequ" onclick="changePage();">
                     <div class="name">
                         Drazesna devojcica
                    </div>
@@ -84,7 +99,7 @@
                         6
                     </div>
                 </div>
-                <div class="sequ">
+                <div class="sequ" onclick="changePage();">
                     <div class="name">
                         Pera
                    </div>
@@ -92,7 +107,55 @@
                         11
                     </div>
                 </div>
-                <div class="sequ">
+                <div class="sequ" onclick="changePage();">
+                    <div class="name">
+                        Koja
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="name">
+                        Koja
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="name">
+                        Koja
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="name">
+                        Koja
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="name">
+                        Koja
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="name">
+                        Koja
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
                     <div class="name">
                         Koja
                    </div>
