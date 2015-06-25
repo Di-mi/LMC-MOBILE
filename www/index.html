@@ -28,7 +28,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-        <title>Sequences</title>
+        <title>Login</title>
         <script type='application/javascript' src='js/fastclick.js'></script>  
 
     </head>
@@ -42,133 +42,26 @@
     
     function changePage()
      {   
-        window.location = "seq1.html";
+        window.location = "sequences.html";
     }
-
-    window.onscroll = function (e) {  
-        if(window.scrollY >= 60) {
-            discription.className += " disc-fixed";
-            sequences.style.marginTop = '61px'
-        }
-        if (window.scrollY <= 59) {
-            discription.className = "disc"
-            sequences.style.marginTop = ''
-        }
-    }  
-
     </script>
-    <body>
+    <body class="log">
         
-        <div class="sequ-table">
-            <div class="header">
-                <div>
-                    Saved Sequences
-                </div>
+        <div class="login form">
+            <div class="form-text">
+                <h1>LOGIN</h1>
             </div>
-            <div class="disc" id="discription">
-                <div class="name">
-                    Sequence Name
-                </div>
-                <div class="no-frames">
-                    No. of frames
-                </div>
+            <div class="form-input">
+                <input type="text" name="username" placeholder="Username"><br>
+                <input type="password" name="password" placeholder="Password"><br>
+                <button><a onclick="changePage();">Sign In</a></button>
             </div>
-
-            <div class="sequences" id="sequences">
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Leptirica moja
-                   </div>
-                    <div class="no-frames">
-                        10
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Test
-                   </div>
-                    <div class="no-frames">
-                        14
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Drazesna devojcica
-                   </div>
-                    <div class="no-frames">
-                        6
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Pera
-                   </div>
-                    <div class="no-frames">
-                        11
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Koja
-                   </div>
-                    <div class="no-frames">
-                        30
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Koja
-                   </div>
-                    <div class="no-frames">
-                        30
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Koja
-                   </div>
-                    <div class="no-frames">
-                        30
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Koja
-                   </div>
-                    <div class="no-frames">
-                        30
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Koja
-                   </div>
-                    <div class="no-frames">
-                        30
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Koja
-                   </div>
-                    <div class="no-frames">
-                        30
-                    </div>
-                </div>
-                <div class="sequ" onclick="changePage();">
-                    <div class="name">
-                        Koja
-                   </div>
-                    <div class="no-frames">
-                        30
-                    </div>
-                </div>
-            </div>
-
-            <div class="new-sequ">+</div>
         </div>
-
-
+        <hr>
+        <div class="login form-after">
+            <h4>Don't have a profile? Sign Up</h4>
+           <h4>Forgot your password?</h4>
+        </div>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

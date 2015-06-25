@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <title>Sequences</title>
+        <script type='application/javascript' src='js/fastclick.js'></script>  
+
+    </head>
+    <script type="text/javascript">
+
+    if ('addEventListener' in document) {                               //za fastCLick
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+    
+    function changePage()
+     {   
+        window.location = "seq1.html";
+    }
+    </script>
+    <body>
+        
+        <div class="sequ-table">
+            <div class="header">
+                <div>
+                    Saved Sequences
+                </div>
+            </div>
+            <div class="disc" id="discription">
+                <div class="name">
+                    Sequence Name
+                </div>
+                <div class="no-frames">
+                    No. of frames
+                </div>
+            </div>
+
+            <div class="sequences" id="sequences">
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        LMC
+                    </div>
+                    <div class="no-frames">
+                        10
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Prva sek
+                   </div>
+                    <div class="no-frames">
+                        14
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Ravno
+                   </div>
+                    <div class="no-frames">
+                        6
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Oblak
+                   </div>
+                    <div class="no-frames">
+                        11
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Tockic
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Omega
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Trougao
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Intervalno
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Proba
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Bravoo
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        Redno
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+                <div class="sequ" onclick="changePage();">
+                    <div class="letter"></div>
+                    <div class="name">
+                        123
+                   </div>
+                    <div class="no-frames">
+                        30
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-sequ">+</div>
+        </div>
+
+        <script type="text/javascript">
+             for(var i=0; i < document.getElementsByClassName('letter').length; i++) {
+                document.getElementsByClassName('letter')[i].innerHTML = document.getElementsByClassName('letter')[i].parentNode.getElementsByClassName('name')[0].innerHTML.charAt(25)
+                document.getElementsByClassName('letter')[i].style.backgroundColor = '#' + Math.floor(Math.random() * 256).toString(16) + Math.floor(Math.random() * 256).toString(16) + Math.floor(Math.random() * 256).toString(16)
+            }
+
+            window.onscroll = function (e) {  
+                if(window.scrollY >= 59) {
+                    discription.className += " disc-fixed";
+                    sequences.style.marginTop = '59px'
+                }
+                if (window.scrollY <= 59) {
+                    discription.className = "disc"
+                    sequences.style.marginTop = ''
+                }
+            }
+        </script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
