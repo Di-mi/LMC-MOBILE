@@ -151,9 +151,13 @@ hr {
 
 .log h4 a {color: #ffffff;}
 
+.log img {
+    margin-top: 50px;
+    margin-bottom: -35px;
+}
+
 .form {
     margin: 0 auto;
-    padding-top: 40px;
 }
 .form-input {margin-top: 20px;}
 
@@ -164,10 +168,12 @@ hr {
 /*-after*/
 .form-after {
     margin: 0 auto;
-    margin-bottom: 60px;
 }
 
-.form-after h4{margin-bottom: 10px;}
+.form-after h4{
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
 
 input {
     margin: 5px 12px;
