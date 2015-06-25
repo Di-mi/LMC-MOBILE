@@ -257,12 +257,12 @@
         </div>
         <div class="time-wrap">
             <div class="timeline">
-                <div class="selected">1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
+                <div onclick="selectFrame(this.innerHTML, this)" class="selected" >1</div>
+                <div onclick="selectFrame(this.innerHTML, this)">2</div>
+                <div onclick="selectFrame(this.innerHTML, this)">3</div>
+                <div onclick="selectFrame(this.innerHTML, this)">4</div>
+                <div onclick="selectFrame(this.innerHTML, this)">5</div>
+                <div onclick="selectFrame(this.innerHTML, this)">6</div>
             </div>
         </div>
         <div class="upload">
@@ -276,12 +276,16 @@
 
             function selectLevel(e, s) {
                 document.getElementById(document.getElementsByClassName('selected')[0].innerHTML).style.display = 'none'
-                document.getElementsByClassName('selected')[0].className = ''
+                document.getElementsByClassName('nav')[0].getElementsByClassName('selected')[0].className = ''
 
                 s.className = 'selected'
                 document.getElementById(e).style.display = 'block'
             }
 
+            function selectFrame (e, s) {
+                document.getElementsByClassName('timeline')[0].getElementsByClassName('selected')[0].className = ''
+                s.className = 'selected'
+            }
         </script>
 
         <script type="text/javascript" src="cordova.js"></script>
