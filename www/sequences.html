@@ -24,6 +24,7 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="theme-color" content="#0395A3">
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -40,8 +41,9 @@
         }, false);
     }
     
-    function changePage()
+    function changePage(sequName)
      {   
+        localStorage.setItem("sequName", sequName);
         window.location = "seq1.html";
     }
     </script>
@@ -63,7 +65,7 @@
             </div>
 
             <div class="sequences" id="sequences">
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         LMC
@@ -72,7 +74,7 @@
                         10
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Prva sek
@@ -81,7 +83,7 @@
                         14
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Ravno
@@ -90,7 +92,7 @@
                         6
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Oblak
@@ -99,7 +101,7 @@
                         11
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Tockic
@@ -108,7 +110,7 @@
                         30
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Omega
@@ -117,7 +119,7 @@
                         30
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Trougao
@@ -126,7 +128,7 @@
                         30
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Intervalno
@@ -135,7 +137,7 @@
                         30
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Proba
@@ -144,7 +146,7 @@
                         30
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Bravoo
@@ -153,7 +155,7 @@
                         30
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         Redno
@@ -162,7 +164,7 @@
                         30
                     </div>
                 </div>
-                <div class="sequ" onclick="changePage();">
+                <div class="sequ" onclick="changePage(getElementsByClassName('name')[0].innerHTML);">
                     <div class="letter"></div>
                     <div class="name">
                         123
@@ -173,7 +175,7 @@
                 </div>
             </div>
 
-            <div class="new-sequ">+</div>
+            <div class="new-sequ" onclick="changePage('New Sequence')">+</div>
         </div>
 
         <script type="text/javascript">

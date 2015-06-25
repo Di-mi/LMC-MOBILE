@@ -56,7 +56,7 @@ hr {
     background-color: #FFBA29;
     width: 100%;
 }
-
+.sequ-table .black {background-color: #252525;}
 .sequ-table .header div {padding-left: 16px;}
 
 .sequ-table .disc {
@@ -152,7 +152,7 @@ hr {
 .log h4 a {color: #ffffff;}
 
 .log img {
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: -35px;
 }
 
@@ -224,3 +224,10 @@ button {
     font-style: normal;
     font-weight: normal;
 }
+
+.sequ-table .sequ-icon {
+    position: absolute;
+    width: 25px;
+    right: 16px;
+}
+
